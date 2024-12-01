@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Meseros</title>
+</head>
+<body>
+    <h1>Lista de Meseros</h1>
+    <ul>
+        {% for mesero in meseros %}
+            <li>{{ mesero.nombre }} - {{ mesero.nacionalidad }} - {{ mesero.edad }} años - DNI: {{ mesero.dni }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

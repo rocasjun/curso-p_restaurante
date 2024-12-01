@@ -1,0 +1,32 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Meseros Peruanos Menores de 30 Años{% endblock %}
+
+{% block content %}
+    <h1>Lista de Meseros Peruanos Menores de 30 Años</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Nacionalidad</th>
+                <th>Edad</th>
+                <th>DNI</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mesero in meseros %}
+                <tr>
+                    <td>{{ mesero.nombre }}</td>
+                    <td>{{ mesero.nacionalidad }}</td>
+                    <td>{{ mesero.edad }}</td>
+                    <td>{{ mesero.dni }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">No se encontraron meseros.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
