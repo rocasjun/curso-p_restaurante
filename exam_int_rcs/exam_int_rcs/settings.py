@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "clientes.apps.ClientesConfig",
     "meseros.apps.MeserosConfig",
     "platos.apps.PlatosConfig",
+    "comensal.apps.ComensalConfig"
 ]
 
 MIDDLEWARE = [
