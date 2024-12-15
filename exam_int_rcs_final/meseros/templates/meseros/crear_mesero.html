@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Crear Mesero{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Crear Mesero</h1>
+    <form method="post" class="bg-light p-4 border rounded">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{% url 'lista_meseros_peruanos' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
+

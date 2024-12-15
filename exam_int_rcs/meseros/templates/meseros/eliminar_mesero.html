@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Eliminar Mesero{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4 text-danger">Eliminar Mesero</h1>
+    <p class="mb-4">¿Estás seguro de que deseas eliminar al mesero <strong>{{ object.nombre }}</strong>?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'lista_meseros_peruanos' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
+
